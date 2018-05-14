@@ -1,4 +1,6 @@
 ---
+# Test change WD
+#- name: query vpc
 - ec2_vpc_net_facts:
     region: "{{ openshift_aws_region }}"
     filters:
@@ -10,6 +12,7 @@
     var: vpcout
     verbosity: 1
 
+#- name: fetch the default subnet id
 - ec2_vpc_subnet_facts:
     region: "{{ openshift_aws_region }}"
     filters:
